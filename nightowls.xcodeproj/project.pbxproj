@@ -14,6 +14,9 @@
 		2DE2969A257DD437004BD00B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DE29698257DD437004BD00B /* LaunchScreen.storyboard */; };
 		2DE296A5257DD437004BD00B /* nightowlsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE296A4257DD437004BD00B /* nightowlsTests.swift */; };
 		2DE296B0257DD437004BD00B /* nightowlsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE296AF257DD437004BD00B /* nightowlsUITests.swift */; };
+		60F3C0FA25801B210041ACC4 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F3C0F925801B210041ACC4 /* SignUpViewController.swift */; };
+		60F3C0FF25802DF90041ACC4 /* PartyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F3C0FE25802DF90041ACC4 /* PartyTableViewCell.swift */; };
+		60F3C10425802EB90041ACC4 /* PartyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F3C10325802EB90041ACC4 /* PartyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		2DE296AB257DD437004BD00B /* nightowlsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = nightowlsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DE296AF257DD437004BD00B /* nightowlsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nightowlsUITests.swift; sourceTree = "<group>"; };
 		2DE296B1257DD437004BD00B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		60F3C0F925801B210041ACC4 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		60F3C0FE25802DF90041ACC4 /* PartyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyTableViewCell.swift; sourceTree = "<group>"; };
+		60F3C10325802EB90041ACC4 /* PartyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +106,10 @@
 				2DE2968D257DD434004BD00B /* AppDelegate.swift */,
 				2DE2968F257DD434004BD00B /* SceneDelegate.swift */,
 				2DE29691257DD434004BD00B /* ViewController.swift */,
+				60F3C0F925801B210041ACC4 /* SignUpViewController.swift */,
+				60F3C0FE25802DF90041ACC4 /* PartyTableViewCell.swift */,
+				60F3C10325802EB90041ACC4 /* PartyViewController.swift */,
+				2DE29693257DD434004BD00B /* Main.storyboard */,
 				2DE29696257DD437004BD00B /* Assets.xcassets */,
 				2DE29698257DD437004BD00B /* LaunchScreen.storyboard */,
 				2DE2969B257DD437004BD00B /* Info.plist */,
@@ -255,8 +265,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DE29692257DD434004BD00B /* ViewController.swift in Sources */,
+				60F3C10425802EB90041ACC4 /* PartyViewController.swift in Sources */,
 				2DE2968E257DD434004BD00B /* AppDelegate.swift in Sources */,
+				60F3C0FA25801B210041ACC4 /* SignUpViewController.swift in Sources */,
 				2DE29690257DD434004BD00B /* SceneDelegate.swift in Sources */,
+				60F3C0FF25802DF90041ACC4 /* PartyTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
