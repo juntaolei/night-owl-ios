@@ -109,7 +109,6 @@
 				60F3C0F925801B210041ACC4 /* SignUpViewController.swift */,
 				60F3C0FE25802DF90041ACC4 /* PartyTableViewCell.swift */,
 				60F3C10325802EB90041ACC4 /* PartyViewController.swift */,
-				2DE29693257DD434004BD00B /* Main.storyboard */,
 				2DE29696257DD437004BD00B /* Assets.xcassets */,
 				2DE29698257DD437004BD00B /* LaunchScreen.storyboard */,
 				2DE2969B257DD437004BD00B /* Info.plist */,
