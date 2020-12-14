@@ -18,7 +18,7 @@ yourself.
 * Added application endpoints with at least one GET, POST, and DELETE requests that interface with the database.
 * Deployed to Heroku.
 
-This app's iOS frontend is available on this [GitHub repository](https://github.com/juntaolei/night-owl-ios).
+This app's backend is available on this [GitHub repository](https://github.com/juntaolei/night-owl-backend).
 
 ## Documentation
 
