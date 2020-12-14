@@ -104,7 +104,13 @@ class PartyTableViewCell: UITableViewCell {
         
     }
         
-    
+    func configure(for party: Party) {
+        partyNameLabel.text = party.parname
+        startTimeLabel.text = party.parname
+        
+//        partyImageView.text = party.parimage
+        partyImageView.image = UIImage(named: party.parimage)
+    }
     
 
 }
