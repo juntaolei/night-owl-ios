@@ -30,6 +30,7 @@ This app's backend is available on this [GitHub repository](https://github.com/j
 
 ![login](https://storage.googleapis.com/night-owl-img/login.png)
 ![register](https://storage.googleapis.com/night-owl-img/register.png)
+![party_view](https://storage.googleapis.com/night-owl-img/party_view.png)
 
 ## Documentation
 
