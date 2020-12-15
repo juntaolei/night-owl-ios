@@ -26,6 +26,11 @@ yourself.
 
 This app's backend is available on this [GitHub repository](https://github.com/juntaolei/night-owl-backend).
 
+**App Screenshoots**
+
+![login](https://storage.googleapis.com/night-owl-img/login.png)
+![register](https://storage.googleapis.com/night-owl-img/register.png)
+
 ## Documentation
 
 The backend API documentation is available on [SwaggerHub](https://app.swaggerhub.com/apis-docs/juntaolei/night-owl/1.0.0).
