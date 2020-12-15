@@ -5,7 +5,7 @@
 Night Owl allows users to check where parties are as well as how fun those parties are,
 saving you from a potentially disappointing event. With this app, you can browse all available
 parties created by other users. You can read the reviews for a party and rate the party
-yourself.
+yourself. You can also upload images that attach to a party or a review.
 
 **Requirements**
 
