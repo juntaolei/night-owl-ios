@@ -22,18 +22,18 @@ class PartyViewController: UIViewController {
     var changelayout: UIButton!
 
     private let partyTableView = UITableView()
-    private let partyReuseIdentifier = "RestaurantReuseIdentifier"
+    private let partyReuseIdentifier = "PartyReuseIdentifier"
     
     let FilterCellReuseIdentifier = "FilterCellReuseIdentifier"
 
     let padding: CGFloat = 10
     let headerHeight: CGFloat = 30
     
-    //Restaurants
-    let oneparty = Party(parname: "Sigma Alpha" , partype: "Lowkey", parimage: "sigma", parloc: "Collegetown")
-    let otherparty = Party(parname: "Formal Frat" , partype: "Lowkey", parimage: "formal", parloc: "Collegetown")
-    let party1 = Party(parname: "Freshman meet" , partype: "Lowkey", parimage: "is", parloc: "Ithaca")
-    let party2 = Party(parname: "Wandering" , partype: "Lowkey", parimage: "sugma", parloc: "Campus")
+    //Parties
+    let oneparty = Party(parname: "Sigma Alpha Neon Night" , partype: "Rager", parimage: "neighbors", parloc: "North Campus", partime: "9:00PM", parrate: "4.5/5.0" )
+    let otherparty = Party(parname: "Winter Formal" , partype: "Fun", parimage: "BTTF", parloc: "Johnson Atrium", partime: "11:00PM", parrate: "3.5/5.0" )
+    let party1 = Party(parname: "Freshman Meet-up" , partype: "Lowkey", parimage: "Meetup", parloc: "Ithaca Commons", partime: "6:00PM", parrate: "2.7/5.0" )
+    let party2 = Party(parname: "Beer Mile" , partype: "Fitness", parimage: "BM", parloc: "Campus", partime: "1:00PM", parrate: "3.75/5.0" )
   
     
     var parties: [Party] = []
@@ -45,7 +45,7 @@ class PartyViewController: UIViewController {
         view.backgroundColor = UIColor(red: 0.22, green: 0.28, blue: 0.40, alpha: 1.00)
         
         
-        title = "Party-Time"
+        title = "Today's Activites"
         parties = [oneparty, otherparty, party1, party2]
         updateres = parties
         
@@ -58,7 +58,7 @@ class PartyViewController: UIViewController {
         partyTableView.dataSource = self
         partyTableView.translatesAutoresizingMaskIntoConstraints = false
         partyTableView.separatorStyle = .none
-        partyTableView.backgroundColor = UIColor(red: 239/255, green: 239/255, blue: 239/255, alpha: 1)
+        partyTableView.backgroundColor = UIColor(red: 0.22, green: 0.28, blue: 0.40, alpha: 1.00)
         partyTableView.register(PartyTableViewCell.self, forCellReuseIdentifier: partyReuseIdentifier)
         view.addSubview(partyTableView)
 
@@ -69,7 +69,7 @@ class PartyViewController: UIViewController {
     func setupConstraints() {
 
         NSLayoutConstraint.activate([
-            partyTableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 100),
+            partyTableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
             partyTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding),
             partyTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             partyTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
@@ -80,7 +80,7 @@ class PartyViewController: UIViewController {
 
 extension PartyViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 220
+        return 400
     }
     
     

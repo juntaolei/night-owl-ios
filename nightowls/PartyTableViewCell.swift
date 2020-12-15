@@ -14,6 +14,9 @@ class PartyTableViewCell: UITableViewCell {
     private let partyNameLabel = UILabel()
     private let startTimeLabel = UILabel()
     private let ratingLabel = UILabel()
+    private let partyLocation = UILabel()
+    private let partyType = UILabel()
+    
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -41,6 +44,7 @@ class PartyTableViewCell: UITableViewCell {
         contentView.addSubview(containerView)
         
         partyImageView.translatesAutoresizingMaskIntoConstraints = false
+        partyImageView.layer.cornerRadius = 5
         partyImageView.clipsToBounds = true
         partyImageView.layer.masksToBounds = true
         partyImageView.contentMode = .scaleAspectFill
@@ -48,26 +52,38 @@ class PartyTableViewCell: UITableViewCell {
         
         partyNameLabel.textColor = .black
         partyNameLabel.translatesAutoresizingMaskIntoConstraints = false
-        partyNameLabel.font = .boldSystemFont(ofSize: 18)
+        partyNameLabel.font = UIFont(name: "Helvetica-Bold", size: 20)
         containerView.addSubview(partyNameLabel)
         
-        startTimeLabel.textColor = UIColor(red: 98/255, green: 98/255, blue: 98/255, alpha: 1)
+        startTimeLabel.textColor = .black
         startTimeLabel.translatesAutoresizingMaskIntoConstraints = false
-        startTimeLabel.font = .systemFont(ofSize: 12)
+        startTimeLabel.font = UIFont(name: "Helvetica", size: 13)
         containerView.addSubview(startTimeLabel)
         
-        ratingLabel.textColor = UIColor(red: 98/255, green: 98/255, blue: 98/255, alpha: 1)
+        ratingLabel.textColor = .black
         ratingLabel.translatesAutoresizingMaskIntoConstraints = false
         ratingLabel.textAlignment = .right
-        ratingLabel.font = .systemFont(ofSize: 12)
+        ratingLabel.font = UIFont(name: "Helvetica", size: 13)
         containerView.addSubview(ratingLabel)
+        
+        partyLocation.textColor = .black
+        partyLocation.translatesAutoresizingMaskIntoConstraints = false
+        partyLocation.font = UIFont(name: "Helvetica", size: 13)
+        containerView.addSubview(partyLocation)
+        
+        partyType.textColor = .black
+        partyType.translatesAutoresizingMaskIntoConstraints = false
+        partyType.font = UIFont(name: "Helvetica", size: 13)
+        containerView.addSubview(partyType)
+        
+        
         
     }
     
     func setupConstraints() {
         
-        let containerPadding: CGFloat = 20
-        let padding: CGFloat = 10
+        let containerPadding: CGFloat = 10
+        let padding: CGFloat = 15
         
         NSLayoutConstraint.activate([
             containerView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: containerPadding),
@@ -77,16 +93,16 @@ class PartyTableViewCell: UITableViewCell {
         ])
         
         NSLayoutConstraint.activate([
-            partyImageView.topAnchor.constraint(equalTo: containerView.topAnchor),
-            partyImageView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
-            partyImageView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
-            partyImageView.heightAnchor.constraint(equalToConstant: 100)
+            partyImageView.topAnchor.constraint(equalTo: containerView.topAnchor, constant: padding),
+            partyImageView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: padding),
+            partyImageView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -padding),
+            partyImageView.heightAnchor.constraint(equalToConstant: 250)
         ])
         
         NSLayoutConstraint.activate([
-            partyNameLabel.topAnchor.constraint(equalTo: partyImageView.bottomAnchor, constant: padding),
-            partyNameLabel.leadingAnchor.constraint(equalTo: partyImageView.leadingAnchor, constant: padding),
-            partyNameLabel.trailingAnchor.constraint(equalTo: ratingLabel.leadingAnchor, constant: -padding)
+            partyNameLabel.topAnchor.constraint(equalTo: partyImageView.bottomAnchor, constant: 5),
+            partyNameLabel.leadingAnchor.constraint(equalTo: partyImageView.leadingAnchor),
+            partyNameLabel.trailingAnchor.constraint(equalTo: ratingLabel.leadingAnchor)
         ])
         
         NSLayoutConstraint.activate([
@@ -101,13 +117,28 @@ class PartyTableViewCell: UITableViewCell {
             startTimeLabel.trailingAnchor.constraint(equalTo: partyNameLabel.trailingAnchor)
         ])
         
+        NSLayoutConstraint.activate([
+            partyLocation.topAnchor.constraint(equalTo: startTimeLabel.bottomAnchor, constant: padding/2),
+            partyLocation.leadingAnchor.constraint(equalTo: partyNameLabel.leadingAnchor),
+            partyLocation.trailingAnchor.constraint(equalTo: partyNameLabel.trailingAnchor)
+        ])
+        
+        NSLayoutConstraint.activate([
+            partyType.topAnchor.constraint(equalTo: partyLocation.bottomAnchor, constant: padding/2),
+            partyType.leadingAnchor.constraint(equalTo: partyNameLabel.leadingAnchor),
+            partyType.trailingAnchor.constraint(equalTo: partyNameLabel.trailingAnchor)
+        ])
 
         
     }
         
     func configure(for party: Party) {
         partyNameLabel.text = party.parname
-        startTimeLabel.text = party.parname
+        startTimeLabel.text = party.partime
+        ratingLabel.text = party.parrate
+        partyLocation.text = party.parloc
+        partyType.text = party.partype
+        
         
 //        partyImageView.text = party.parimage
         partyImageView.image = UIImage(named: party.parimage)

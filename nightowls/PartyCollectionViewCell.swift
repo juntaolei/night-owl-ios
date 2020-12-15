@@ -31,7 +31,7 @@ class PartyCollectionViewCell: UIViewController{
         
         partyImageView.translatesAutoresizingMaskIntoConstraints = false
         
-        PartyimageView.image = UIImage(named: party.parimage)
+//        PartyimageView.image = UIImage(named: party.parimage)
         partyImageView.contentMode = .scaleAspectFill
         partyImageView.layer.masksToBounds = true
         view.addSubview(partyImageView)
