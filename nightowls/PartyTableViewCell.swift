@@ -19,7 +19,8 @@ class PartyTableViewCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         selectionStyle = .none
-        backgroundColor = UIColor(red: 239/255, green: 239/255, blue: 239/255, alpha: 1)
+//        backgroundColor = .white
+        backgroundColor = UIColor(red: 0.22, green: 0.28, blue: 0.40, alpha: 1.00)
         
         setupViews()
         setupConstraints()

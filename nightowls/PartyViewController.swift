@@ -42,9 +42,10 @@ class PartyViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.backgroundColor = UIColor(red: 0.22, green: 0.28, blue: 0.40, alpha: 1.00)
         
-        title = "My Restaurants"
-        view.backgroundColor = .white
+        
+        title = "Party-Time"
         parties = [oneparty, otherparty, party1, party2]
         updateres = parties
         
