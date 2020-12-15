@@ -11,6 +11,12 @@ yourself.
 
 **Frontend**
 
+* Added AutoLayout.
+* Added UICollectionView and UITableView.
+* Added Navigation.
+* Used a Cocoa pod.
+* Added networking with backend API.
+
 **Backend**
 
 * Created a Swagger API documentation.
