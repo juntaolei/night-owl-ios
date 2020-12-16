@@ -31,6 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
+    //credit to cornell app dev's open source code that was used throughout this course as a reference while building this app.
 
 }
 
